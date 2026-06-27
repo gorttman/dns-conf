@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: pihole-custom-dns
+  namespace: pihole
+  labels:
+    app: pihole
+    app.kubernetes.io/component: dns
+    app.kubernetes.io/name: pihole
+    app.kubernetes.io/part-of: dns-config
+data:
+  02-i3sec-custom-dns.conf: |
+    address=/argocd.i3sec.com.au/192.168.1.11
+    address=/pihole.i3sec.com.au/192.168.1.11
+    address=/novnc.i3sec.com.au/192.168.1.11
