@@ -13,3 +13,4 @@ data:
     address=/argocd.i3sec.com.au/192.168.1.11
     address=/pihole.i3sec.com.au/192.168.1.11
     address=/novnc.i3sec.com.au/192.168.1.11
+    address=/obsidian.i3sec.com.au/192.168.1.11
