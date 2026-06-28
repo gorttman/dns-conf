@@ -7,7 +7,6 @@ configMapGenerator:
     behavior: create
     files:
       - _placeholder.server=fragments/_placeholder.server
-      - home.server=fragments/home.server
-      - hosts.override=fragments/hosts.override
+      - hosts.override=hosts.override
 generatorOptions:
   disableNameSuffixHash: true
