@@ -1,3 +1,9 @@
 # Replace with your actual node IPs that run PXE/NFS via hostNetwork
 pxe.i3sec.com.au  A  192.168.1.10
 nfs.i3sec.com.au  A  192.168.1.10
+
+# k3s ingress (Traefik)
+argocd.i3sec.com.au    A  192.168.1.11
+pihole.i3sec.com.au    A  192.168.1.11
+novnc.i3sec.com.au     A  192.168.1.11
+obsidian.i3sec.com.au  A  192.168.1.11
