@@ -10,10 +10,10 @@ metadata:
     app.kubernetes.io/part-of: dns-config
 data:
   02-i3sec-custom-dns.conf: |
-    address=/argocd.i3sec.com.au/192.168.1.11
-    address=/pihole.i3sec.com.au/192.168.1.11
-    address=/novnc.i3sec.com.au/192.168.1.11
-    address=/obsidian.i3sec.com.au/192.168.1.11
-    address=/vscode.i3sec.com.au/192.168.1.11
+    address=/argocd.i3sec.com.au/192.168.2.10
+    address=/pihole.i3sec.com.au/192.168.2.10
+    address=/novnc.i3sec.com.au/192.168.2.10
+    address=/obsidian.i3sec.com.au/192.168.2.10
+    address=/vscode.i3sec.com.au/192.168.2.10
     address=/qnap.i3sec.com.au/192.168.2.30
     cname=files.i3sec.com.au,qnap.i3sec.com.au
