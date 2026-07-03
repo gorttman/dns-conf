@@ -1,13 +1,4 @@
-hosts {
-    # Replace with your actual node IPs that run PXE/NFS via hostNetwork
-    192.168.1.10 pxe.i3sec.com.au
-    192.168.1.10 nfs.i3sec.com.au
-
-    # k3s ingress (Traefik)
-    192.168.1.11 argocd.i3sec.com.au
-    192.168.1.11 pihole.i3sec.com.au
-    192.168.1.11 novnc.i3sec.com.au
-    192.168.1.11 obsidian.i3sec.com.au
-
-    fallthrough
-}
+# Real A records for i3sec.com.au now live in home.server, in a
+# separate i3sec.com.au:53 server block (the main .:53 block already
+# declares a `hosts` plugin for k3s's NodeHosts, and CoreDNS only
+# allows one `hosts` plugin per server block).
