@@ -1,4 +1,16 @@
-# Real A records for i3sec.com.au now live in home.server, in a
-# separate i3sec.com.au:53 server block (the main .:53 block already
-# declares a `hosts` plugin for k3s's NodeHosts, and CoreDNS only
-# allows one `hosts` plugin per server block).
+# This is read directly as a plain hosts-file by the `hosts` plugin
+# (see day1-foundation apps/coredns/coredns-configmap.yml: `hosts
+# /etc/coredns/custom/hosts.override { ... }`) - plain "IP hostname"
+# syntax, NOT Corefile directives. Do not wrap in a hosts{} block.
+
+# Replace with your actual node IPs that run PXE/NFS via hostNetwork
+192.168.1.10 pxe.i3sec.com.au
+192.168.1.10 nfs.i3sec.com.au
+
+# k3s ingress (Traefik) - moved off k3s ServiceLB to a MetalLB floating
+# IP on 2026-07-03, see day1-foundation apps/metallb/README.md.
+# pihole-web is a separate MetalLB IP, not routed through Traefik.
+192.168.2.241 argocd.i3sec.com.au
+192.168.2.240 pihole.i3sec.com.au
+192.168.2.241 novnc.i3sec.com.au
+192.168.2.241 obsidian.i3sec.com.au
