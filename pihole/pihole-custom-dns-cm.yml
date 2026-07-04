@@ -10,12 +10,14 @@ metadata:
     app.kubernetes.io/part-of: dns-config
 data:
   # argocd/novnc/obsidian/vscode all route through Traefik ingress.
-  # pihole.i3sec.com.au points at pihole-web directly (not through Traefik).
+  # pihole.i3sec.com.au moved to the Traefik ingress (valid TLS cert,
+  # and the ArgoCD link icon works) on 2026-07-05; the direct pihole-web
+  # LoadBalancer remains reachable at http://192.168.2.240:8080/admin/.
   # Both moved off k3s ServiceLB (192.168.2.10) to MetalLB floating IPs
   # on 2026-07-03 - see day1-foundation apps/metallb/README.md.
   02-i3sec-custom-dns.conf: |
     address=/argocd.i3sec.com.au/192.168.2.241
-    address=/pihole.i3sec.com.au/192.168.2.240
+    address=/pihole.i3sec.com.au/192.168.2.241
     address=/novnc.i3sec.com.au/192.168.2.241
     address=/obsidian.i3sec.com.au/192.168.2.241
     address=/vscode.i3sec.com.au/192.168.2.241

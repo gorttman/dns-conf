@@ -9,9 +9,10 @@
 
 # k3s ingress (Traefik) - moved off k3s ServiceLB to a MetalLB floating
 # IP on 2026-07-03, see day1-foundation apps/metallb/README.md.
-# pihole-web is a separate MetalLB IP, not routed through Traefik.
+# pihole.i3sec.com.au moved to the Traefik ingress 2026-07-05; the direct
+# pihole-web LB is still at http://192.168.2.240:8080/admin/.
 192.168.2.241 argocd.i3sec.com.au
-192.168.2.240 pihole.i3sec.com.au
+192.168.2.241 pihole.i3sec.com.au
 192.168.2.241 novnc.i3sec.com.au
 192.168.2.241 obsidian.i3sec.com.au
 192.168.2.241 ca.i3sec.com.au
