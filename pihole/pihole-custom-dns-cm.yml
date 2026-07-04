@@ -19,5 +19,6 @@ data:
     address=/novnc.i3sec.com.au/192.168.2.241
     address=/obsidian.i3sec.com.au/192.168.2.241
     address=/vscode.i3sec.com.au/192.168.2.241
+    address=/ca.i3sec.com.au/192.168.2.241
     address=/qnap.i3sec.com.au/192.168.2.30
     cname=files.i3sec.com.au,qnap.i3sec.com.au
