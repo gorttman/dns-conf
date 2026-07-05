@@ -26,3 +26,5 @@
 192.168.2.241 sabnzbd.i3sec.com.au
 192.168.2.241 bazarr.i3sec.com.au
 192.168.2.241 jdownloader.i3sec.com.au
+192.168.2.241 grafana.i3sec.com.au
+192.168.2.241 influxdb.i3sec.com.au

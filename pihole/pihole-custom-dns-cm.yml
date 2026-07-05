@@ -32,5 +32,7 @@ data:
     address=/sabnzbd.i3sec.com.au/192.168.2.241
     address=/bazarr.i3sec.com.au/192.168.2.241
     address=/jdownloader.i3sec.com.au/192.168.2.241
+    address=/grafana.i3sec.com.au/192.168.2.241
+    address=/influxdb.i3sec.com.au/192.168.2.241
     address=/qnap.i3sec.com.au/192.168.2.30
     cname=files.i3sec.com.au,qnap.i3sec.com.au
