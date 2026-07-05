@@ -25,5 +25,6 @@ data:
     address=/paperless.i3sec.com.au/192.168.2.241
     address=/adminer.i3sec.com.au/192.168.2.241
     address=/jellyfin.i3sec.com.au/192.168.2.241
+    address=/kavita.i3sec.com.au/192.168.2.241
     address=/qnap.i3sec.com.au/192.168.2.30
     cname=files.i3sec.com.au,qnap.i3sec.com.au
