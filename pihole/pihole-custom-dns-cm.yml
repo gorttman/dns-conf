@@ -26,5 +26,11 @@ data:
     address=/adminer.i3sec.com.au/192.168.2.241
     address=/jellyfin.i3sec.com.au/192.168.2.241
     address=/kavita.i3sec.com.au/192.168.2.241
+    address=/sonarr.i3sec.com.au/192.168.2.241
+    address=/radarr.i3sec.com.au/192.168.2.241
+    address=/prowlarr.i3sec.com.au/192.168.2.241
+    address=/sabnzbd.i3sec.com.au/192.168.2.241
+    address=/bazarr.i3sec.com.au/192.168.2.241
+    address=/jdownloader.i3sec.com.au/192.168.2.241
     address=/qnap.i3sec.com.au/192.168.2.30
     cname=files.i3sec.com.au,qnap.i3sec.com.au
