@@ -35,5 +35,6 @@ data:
     address=/grafana.i3sec.com.au/192.168.2.241
     address=/influxdb.i3sec.com.au/192.168.2.241
     address=/homeassistant.i3sec.com.au/192.168.2.241
+    address=/n8n.i3sec.com.au/192.168.2.241
     address=/qnap.i3sec.com.au/192.168.2.30
     cname=files.i3sec.com.au,qnap.i3sec.com.au
