@@ -43,5 +43,9 @@ data:
     address=/influxdb.i3sec.com.au/192.168.2.241
     address=/homeassistant.i3sec.com.au/192.168.2.241
     address=/n8n.i3sec.com.au/192.168.2.241
+    # Anything only on the nginx ingress class (Cloudflare Tunnel-routed,
+    # no separate traefik-class ingress) resolves to ingress-nginx's own
+    # VIP instead of traefik's - see day0-bootstrap apps/ingress-nginx.
+    address=/books.i3sec.com.au/192.168.2.242
     address=/qnap.i3sec.com.au/192.168.2.30
     cname=files.i3sec.com.au,qnap.i3sec.com.au
