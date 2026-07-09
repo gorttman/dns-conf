@@ -16,6 +16,13 @@ data:
   # Both moved off k3s ServiceLB (192.168.2.10) to MetalLB floating IPs
   # on 2026-07-03 - see day1-foundation apps/metallb/README.md.
   02-i3sec-custom-dns.conf: |
+    # Global: dnsmasq has no working per-domain AAAA suppression, only a
+    # network-wide toggle. Every address= line below is IPv4-only, so
+    # without this, AAAA queries for these hosts fall through to upstream
+    # and leak the real public (Cloudflare) answer - bypassing split-horizon
+    # entirely for any host that also has a public DNS presence. IPv6 is
+    # believed off at the router; this is the DNS-side half of that.
+    filter-AAAA
     address=/argocd.i3sec.com.au/192.168.2.241
     address=/pihole.i3sec.com.au/192.168.2.241
     address=/novnc.i3sec.com.au/192.168.2.241
