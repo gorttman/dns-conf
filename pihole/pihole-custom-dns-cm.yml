@@ -23,6 +23,16 @@ data:
     # entirely for any host that also has a public DNS presence. IPv6 is
     # believed off at the router; this is the DNS-side half of that.
     filter-AAAA
+    # Same leak, different record type: address= only overrides A/AAAA, not
+    # the newer HTTPS/SVCB record (type 65) that HTTP/3-capable browsers use
+    # for connection hints. Confirmed 2026-07-15 that qnap.i3sec.com.au's
+    # HTTPS record was passing through untouched with Cloudflare's real
+    # anycast ipv4hint - a client that preferred those hints over the
+    # (correctly overridden) A record would bypass split-horizon entirely
+    # and hit Cloudflare's edge, where the qnap host now fails closed under
+    # the default-deny mTLS WAF rule. filter-rr=65 strips HTTPS records
+    # globally, the same way filter-AAAA does for AAAA.
+    filter-rr=65
     address=/argocd.i3sec.com.au/192.168.2.241
     address=/pihole.i3sec.com.au/192.168.2.241
     address=/novnc.i3sec.com.au/192.168.2.241
