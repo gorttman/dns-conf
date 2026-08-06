@@ -1,0 +1,46 @@
+# Static host overrides for i3sec.com.au, as k3s's own top-level
+# *.server import (a SEPARATE server block, not spliced into the main
+# `.:53` block via *.override). CoreDNS only allows one `hosts` plugin
+# instance per server block, and the stock `.:53` block already has one
+# (NodeHosts) - so these entries need their own dedicated zone/server
+# block instead, not another `hosts {}` inside the main one (that
+# fails to start with "plugin/hosts: this plugin can only be used once
+# per Server Block" - found the hard way 2026-08-06, see HISTORY in
+# day1-foundation apps/coredns/README.md).
+i3sec.com.au:53 {
+    hosts {
+        # Replace with your actual node IPs that run PXE/NFS via hostNetwork
+        192.168.1.10 pxe.i3sec.com.au
+        192.168.1.10 nfs.i3sec.com.au
+
+        # k3s ingress (Traefik) - moved off k3s ServiceLB to a MetalLB
+        # floating IP on 2026-07-03, see day1-foundation
+        # apps/metallb/README.md. pihole.i3sec.com.au moved to the
+        # Traefik ingress 2026-07-05; the direct pihole-web LB is
+        # still at http://192.168.2.240:8080/admin/.
+        192.168.2.241 argocd.i3sec.com.au
+        192.168.2.241 pihole.i3sec.com.au
+        192.168.2.241 novnc.i3sec.com.au
+        192.168.2.241 obsidian.i3sec.com.au
+        192.168.2.241 ca.i3sec.com.au
+        192.168.2.241 paperless.i3sec.com.au
+        192.168.2.241 adminer.i3sec.com.au
+        192.168.2.241 jellyfin.i3sec.com.au
+        192.168.2.241 kavita.i3sec.com.au
+        192.168.2.241 sonarr.i3sec.com.au
+        192.168.2.241 radarr.i3sec.com.au
+        192.168.2.241 prowlarr.i3sec.com.au
+        192.168.2.241 sabnzbd.i3sec.com.au
+        192.168.2.241 bazarr.i3sec.com.au
+        192.168.2.241 jdownloader.i3sec.com.au
+        192.168.2.241 grafana.i3sec.com.au
+        192.168.2.241 influxdb.i3sec.com.au
+        192.168.2.241 homeassistant.i3sec.com.au
+        192.168.2.241 n8n.i3sec.com.au
+        192.168.2.241 immich.i3sec.com.au
+
+        fallthrough
+    }
+    forward . 1.1.1.1 8.8.8.8
+    cache 30
+}
