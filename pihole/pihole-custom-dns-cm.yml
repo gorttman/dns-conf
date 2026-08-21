@@ -55,6 +55,9 @@ data:
     address=/homeassistant.i3sec.com.au/192.168.2.241
     address=/n8n.i3sec.com.au/192.168.2.241
     address=/immich.i3sec.com.au/192.168.2.241
+    # Suppress AAAA for immich specifically - filter-AAAA global doesn't
+    # prevent all AAAA leaks, so explicit per-domain suppression needed
+    address=/immich.i3sec.com.au/::
     # Anything only on the nginx ingress class (Cloudflare Tunnel-routed,
     # no separate traefik-class ingress) resolves to ingress-nginx's own
     # VIP instead of traefik's - see day0-bootstrap apps/ingress-nginx.
