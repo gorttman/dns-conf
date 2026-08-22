@@ -38,6 +38,7 @@ i3sec.com.au:53 {
         192.168.2.241 homeassistant.i3sec.com.au
         192.168.2.241 n8n.i3sec.com.au
         192.168.2.241 immich.i3sec.com.au
+        192.168.2.241 backup-status.i3sec.com.au
 
         fallthrough
     }

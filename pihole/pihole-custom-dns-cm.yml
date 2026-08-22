@@ -55,6 +55,7 @@ data:
     address=/homeassistant.i3sec.com.au/192.168.2.241
     address=/n8n.i3sec.com.au/192.168.2.241
     address=/immich.i3sec.com.au/192.168.2.241
+    address=/backup-status.i3sec.com.au/192.168.2.241
     # Suppress AAAA for immich specifically - filter-AAAA global doesn't
     # prevent all AAAA leaks, so explicit per-domain suppression needed
     address=/immich.i3sec.com.au/::
