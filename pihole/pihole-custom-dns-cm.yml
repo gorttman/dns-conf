@@ -42,15 +42,7 @@ data:
     address=/paperless.i3sec.com.au/192.168.2.241
     address=/adminer.i3sec.com.au/192.168.2.241
     address=/jellyfin.i3sec.com.au/192.168.2.241
-    # CANARY 2026-08-26: single hostname pointed at the wired-pool VIP
-    # (192.168.1.2, announced by MetalLB on end0) to prove that a real
-    # LAN client can route to the backend VLAN before moving the other
-    # 22 hostnames off 192.168.2.241. Cannot be verified from inside the
-    # cluster - both nodes are dual-homed, so a forced-source-interface
-    # test produces asymmetric routing and a false negative. Only a real
-    # single-homed client (iPad) settles it. books.i3sec.com.au serves
-    # the same backend if this needs backing out.
-    address=/calibre-web.i3sec.com.au/192.168.1.2
+    address=/calibre-web.i3sec.com.au/192.168.2.241
     address=/sonarr.i3sec.com.au/192.168.2.241
     address=/radarr.i3sec.com.au/192.168.2.241
     address=/prowlarr.i3sec.com.au/192.168.2.241
