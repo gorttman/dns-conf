@@ -64,5 +64,13 @@ data:
     # no separate traefik-class ingress) resolves to ingress-nginx's own
     # VIP instead of traefik's - see day0-bootstrap apps/ingress-nginx.
     address=/books.i3sec.com.au/192.168.2.242
-    address=/qnap.i3sec.com.au/192.168.2.30
+    # Moved from 192.168.2.30 (main-LAN "valinor" identity) to
+    # 192.168.20.30 (Trusted/VLAN20, the "valinor-m" backend identity)
+    # 2026-08-30 - QNAP consolidated to a single interface as part of
+    # the VLAN20 backend migration (see day0-infra-build's
+    # effervescent-squishing-token plan / memory
+    # project_vlan20_backend_migration). qnap.i3sec.com.au is now the
+    # one and only QNAP address, for both general/web access and
+    # cluster storage traffic.
+    address=/qnap.i3sec.com.au/192.168.20.30
     cname=files.i3sec.com.au,qnap.i3sec.com.au
