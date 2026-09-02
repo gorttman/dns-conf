@@ -18,27 +18,27 @@ i3sec.com.au:53 {
         # apps/metallb/README.md. pihole.i3sec.com.au moved to the
         # Traefik ingress 2026-07-05; the direct pihole-web LB is
         # still at http://192.168.2.240:8080/admin/.
-        192.168.2.241 argocd.i3sec.com.au
-        192.168.2.241 pihole.i3sec.com.au
-        192.168.2.241 novnc.i3sec.com.au
-        192.168.2.241 obsidian.i3sec.com.au
-        192.168.2.241 ca.i3sec.com.au
-        192.168.2.241 paperless.i3sec.com.au
-        192.168.2.241 adminer.i3sec.com.au
-        192.168.2.241 jellyfin.i3sec.com.au
-        192.168.2.241 kavita.i3sec.com.au
-        192.168.2.241 sonarr.i3sec.com.au
-        192.168.2.241 radarr.i3sec.com.au
-        192.168.2.241 prowlarr.i3sec.com.au
-        192.168.2.241 sabnzbd.i3sec.com.au
-        192.168.2.241 bazarr.i3sec.com.au
-        192.168.2.241 jdownloader.i3sec.com.au
-        192.168.2.241 grafana.i3sec.com.au
-        192.168.2.241 influxdb.i3sec.com.au
-        192.168.2.241 homeassistant.i3sec.com.au
-        192.168.2.241 n8n.i3sec.com.au
-        192.168.2.241 immich.i3sec.com.au
-        192.168.2.241 backup-status.i3sec.com.au
+        192.168.20.239 argocd.i3sec.com.au
+        192.168.20.239 pihole.i3sec.com.au
+        192.168.20.239 novnc.i3sec.com.au
+        192.168.20.239 obsidian.i3sec.com.au
+        192.168.20.239 ca.i3sec.com.au
+        192.168.20.239 paperless.i3sec.com.au
+        192.168.20.239 adminer.i3sec.com.au
+        192.168.20.239 jellyfin.i3sec.com.au
+        192.168.20.239 kavita.i3sec.com.au
+        192.168.20.239 sonarr.i3sec.com.au
+        192.168.20.239 radarr.i3sec.com.au
+        192.168.20.239 prowlarr.i3sec.com.au
+        192.168.20.239 sabnzbd.i3sec.com.au
+        192.168.20.239 bazarr.i3sec.com.au
+        192.168.20.239 jdownloader.i3sec.com.au
+        192.168.20.239 grafana.i3sec.com.au
+        192.168.20.239 influxdb.i3sec.com.au
+        192.168.20.239 homeassistant.i3sec.com.au
+        192.168.20.239 n8n.i3sec.com.au
+        192.168.20.239 immich.i3sec.com.au
+        192.168.20.239 backup-status.i3sec.com.au
 
         fallthrough
     }

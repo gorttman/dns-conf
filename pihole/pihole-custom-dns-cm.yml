@@ -33,37 +33,37 @@ data:
     # the default-deny mTLS WAF rule. filter-rr=65 strips HTTPS records
     # globally, the same way filter-AAAA does for AAAA.
     filter-rr=65
-    address=/argocd.i3sec.com.au/192.168.2.241
-    address=/pihole.i3sec.com.au/192.168.2.241
-    address=/novnc.i3sec.com.au/192.168.2.241
-    address=/obsidian.i3sec.com.au/192.168.2.241
-    address=/vscode.i3sec.com.au/192.168.2.241
-    address=/ca.i3sec.com.au/192.168.2.241
-    address=/paperless.i3sec.com.au/192.168.2.241
-    address=/adminer.i3sec.com.au/192.168.2.241
-    address=/jellyfin.i3sec.com.au/192.168.2.241
-    address=/calibre-web.i3sec.com.au/192.168.2.241
-    address=/sonarr.i3sec.com.au/192.168.2.241
-    address=/radarr.i3sec.com.au/192.168.2.241
-    address=/prowlarr.i3sec.com.au/192.168.2.241
-    address=/sabnzbd.i3sec.com.au/192.168.2.241
-    address=/bazarr.i3sec.com.au/192.168.2.241
-    address=/jdownloader.i3sec.com.au/192.168.2.241
-    address=/lazylibrarian.i3sec.com.au/192.168.2.241
-    address=/whisparr.i3sec.com.au/192.168.2.241
-    address=/grafana.i3sec.com.au/192.168.2.241
-    address=/influxdb.i3sec.com.au/192.168.2.241
-    address=/homeassistant.i3sec.com.au/192.168.2.241
-    address=/n8n.i3sec.com.au/192.168.2.241
-    address=/immich.i3sec.com.au/192.168.2.241
-    address=/backup-status.i3sec.com.au/192.168.2.241
+    address=/argocd.i3sec.com.au/192.168.20.239
+    address=/pihole.i3sec.com.au/192.168.20.239
+    address=/novnc.i3sec.com.au/192.168.20.239
+    address=/obsidian.i3sec.com.au/192.168.20.239
+    address=/vscode.i3sec.com.au/192.168.20.239
+    address=/ca.i3sec.com.au/192.168.20.239
+    address=/paperless.i3sec.com.au/192.168.20.239
+    address=/adminer.i3sec.com.au/192.168.20.239
+    address=/jellyfin.i3sec.com.au/192.168.20.239
+    address=/calibre-web.i3sec.com.au/192.168.20.239
+    address=/sonarr.i3sec.com.au/192.168.20.239
+    address=/radarr.i3sec.com.au/192.168.20.239
+    address=/prowlarr.i3sec.com.au/192.168.20.239
+    address=/sabnzbd.i3sec.com.au/192.168.20.239
+    address=/bazarr.i3sec.com.au/192.168.20.239
+    address=/jdownloader.i3sec.com.au/192.168.20.239
+    address=/lazylibrarian.i3sec.com.au/192.168.20.239
+    address=/whisparr.i3sec.com.au/192.168.20.239
+    address=/grafana.i3sec.com.au/192.168.20.239
+    address=/influxdb.i3sec.com.au/192.168.20.239
+    address=/homeassistant.i3sec.com.au/192.168.20.239
+    address=/n8n.i3sec.com.au/192.168.20.239
+    address=/immich.i3sec.com.au/192.168.20.239
+    address=/backup-status.i3sec.com.au/192.168.20.239
     # Suppress AAAA for immich specifically - filter-AAAA global doesn't
     # prevent all AAAA leaks, so explicit per-domain suppression needed
     address=/immich.i3sec.com.au/::
     # Anything only on the nginx ingress class (Cloudflare Tunnel-routed,
     # no separate traefik-class ingress) resolves to ingress-nginx's own
     # VIP instead of traefik's - see day0-bootstrap apps/ingress-nginx.
-    address=/books.i3sec.com.au/192.168.2.242
+    address=/books.i3sec.com.au/192.168.20.238
     # Moved from 192.168.2.30 (main-LAN "valinor" identity) to
     # 192.168.20.30 (Trusted/VLAN20, the "valinor-m" backend identity)
     # 2026-08-30 - QNAP consolidated to a single interface as part of
