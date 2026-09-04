@@ -36,7 +36,6 @@ i3sec.com.au:53 {
         192.168.20.239 grafana.i3sec.com.au
         192.168.20.239 influxdb.i3sec.com.au
         192.168.20.239 homeassistant.i3sec.com.au
-        192.168.20.239 n8n.i3sec.com.au
         192.168.20.239 immich.i3sec.com.au
         192.168.20.239 backup-status.i3sec.com.au
 
