@@ -76,3 +76,19 @@ data:
     # cluster storage traffic.
     address=/qnap.i3sec.com.au/192.168.20.30
     cname=files.i3sec.com.au,qnap.i3sec.com.au
+    # Device names, moved here from the UDM's local_dns_record (unifi-tf
+    # clients.tf) 2026-10-03: DHCP hands out only these Pi-holes, so the
+    # UDM-local records were never reachable by any client. host-record
+    # (not address=) so the reverse lookup works too - Pi-hole's query log
+    # shows names instead of bare IPs. The MAC->IP reservation stays in
+    # unifi-tf clients.tf; if a reservation changes there, change the
+    # matching line here in the same pass.
+    host-record=googlehome-lounge.i3sec.com.au,192.168.2.69
+    host-record=googlehome-shed.i3sec.com.au,192.168.2.40
+    host-record=googlehome-clock.i3sec.com.au,192.168.2.188
+    host-record=googlehome-bar.i3sec.com.au,192.168.2.197
+    host-record=chromecast-pergola.i3sec.com.au,192.168.2.196
+    # pinode-01 is on Trusted (VLAN20) since the 2026-08-30 backend
+    # migration. The UDM record said 192.168.2.11 (the old main-LAN
+    # identity) - not carried over.
+    host-record=pinode-01.i3sec.com.au,192.168.20.11
