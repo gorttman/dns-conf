@@ -59,6 +59,7 @@ data:
     address=/movie-status.i3sec.com.au/192.168.20.239
     address=/reports.i3sec.com.au/192.168.20.239
     address=/open-webui.i3sec.com.au/192.168.20.239
+    address=/music.i3sec.com.au/192.168.20.239
     # Suppress AAAA for immich specifically - filter-AAAA global doesn't
     # prevent all AAAA leaks, so explicit per-domain suppression needed
     address=/immich.i3sec.com.au/::
