@@ -64,9 +64,22 @@ empty, AAAA record still suppressed.
 
 ## Gotchas that apply to any future change here
 
-- **ConfigMap uses a `subPath` mount.** `subPath`-mounted files don't
-  get Kubernetes' atomic symlink-swap update — editing the ConfigMap
-  alone does nothing until the Pi-hole pod is manually restarted.
+- **ConfigMap uses a `subPath` mount, but Reloader restarts the pods for
+  you.** `subPath` files don't get Kubernetes' live update, so a change
+  only takes effect on a pod restart - and both Deployments carry
+  `reloader.stakater.com/auto: "true"`, so Reloader restarts BOTH
+  Pi-holes as soon as ArgoCD updates the ConfigMap. No manual restart
+  is needed (this section used to say it was; that was stale). Both
+  Deployments use `RollingUpdate` with `maxUnavailable: 0` (since
+  2026-10-03), so each keeps its old pod answering until the new one is
+  ready. Measured with both restarted at the same instant: 5 lost
+  queries out of ~940, no continuous gap. With the old `Recreate`
+  strategy the same event took both VIPs down together for about a
+  minute.
+- **Device names (googlehome-*, chromecast-pergola, pinode-01) live
+  here as `host-record` lines**, not on the UDM. The MAC->IP
+  reservation stays in unifi-tf `clients.tf`; if a `fixed_ip` changes
+  there, change the matching `host-record` here in the same pass.
 - **ArgoCD git-polling can lag.** Force a hard refresh
   (`argocd.argoproj.io/refresh: hard` annotation patch) if a pushed
   change isn't showing up as synced.
