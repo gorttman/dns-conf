@@ -47,8 +47,6 @@ data:
     address=/radarr.i3sec.com.au/192.168.20.239
     address=/prowlarr.i3sec.com.au/192.168.20.239
     address=/sabnzbd.i3sec.com.au/192.168.20.239
-    address=/bazarr.i3sec.com.au/192.168.20.239
-    address=/jdownloader.i3sec.com.au/192.168.20.239
     address=/lazylibrarian.i3sec.com.au/192.168.20.239
     address=/whisparr.i3sec.com.au/192.168.20.239
     address=/grafana.i3sec.com.au/192.168.20.239
